@@ -2,7 +2,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
- 
+import Cookies from 'js-cookie';
 function App() {
   // Handle redirect to the other application in the same tab
   const handleRedirect = () => {
@@ -13,7 +13,13 @@ function App() {
     
       // Redirect in the same tab with the token appended to the URL
       window.location.href = `https://master.d3tpy1v70it606.amplifyapp.com`;
-document.cookie = "saabiq=mass; path=/; domain=.amplifyapp.com; SameSite=None; Secure";
+// Set the cookie
+Cookies.set('jaja', 'ajaj', {
+  path: '/',             // Accessible across all paths on the domain
+  domain: '.amplifyapp.com', // Accessible on all subdomains of example.com
+  sameSite: 'None',       // Allows cross-domain requests between subdomains
+  secure: true            // Only sent over HTTPS
+});
 
      
   };
