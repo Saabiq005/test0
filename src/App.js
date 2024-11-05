@@ -13,7 +13,7 @@ function App() {
     
       // Redirect in the same tab with the token appended to the URL
       window.location.href = `https://master.d3tpy1v70it606.amplifyapp.com`;
-   sessionStorage.setItem("saabiq", 123);
+  document.cookie = "saabiq=mass; path=/; domain=.amplifyapp.com";
     
   };
  
