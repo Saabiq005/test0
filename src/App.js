@@ -10,12 +10,11 @@ function App() {
     const urlParams = new URLSearchParams(window.location.hash.slice(1));
     const token = urlParams.get('id_token'); // Assuming 'id_token' contains the token
  
-    if (token) {
+    
       // Redirect in the same tab with the token appended to the URL
-      window.location.href = `https://master.d3tpy1v70it606.amplifyapp.com/#id_token=${token}`;
-    } else {
-      console.error("Token not found in URL.");
-    }
+      window.location.href = `https://master.d3tpy1v70it606.amplifyapp.com`;
+   sessionStorage.setItem("saabiq", 123);
+    
   };
  
   // Handle sign out
